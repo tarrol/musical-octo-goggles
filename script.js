@@ -48,10 +48,12 @@ var generateBtn = document.querySelector("#generate");
 
 // Write password to the #password input
 function writePassword() {
-  var password = generatePassword();
+  clearPasswordText()
+  generatePassword()
+  var passwordOutput = password.join('')
+  console.log(passwordOutput);
   var passwordText = document.querySelector("#password");
-
-  passwordText.value = password;
+  passwordText.value = passwordOutput;
 
 }
 
