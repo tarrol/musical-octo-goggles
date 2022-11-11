@@ -30,9 +30,18 @@ function generatePool() {
 }
 
 var passwordPool = generatePool()
+
+//Generate password
+
 var password = []
+function generatePassword() {
 
-
+  for (let i = 0; i < Math.floor(passwordLength); i++) {
+    randomSelect = Math.floor(Math.random() * passwordPool.length)
+    passCharacter = passwordPool[randomSelect]
+    password = password.concat(passCharacter)
+  }
+}
 
 // Assignment Code
 var generateBtn = document.querySelector("#generate");
