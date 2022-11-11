@@ -6,6 +6,13 @@ var lowerCharacters = ["a", "b", "c", "d", 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l
 
 var upperCharacters = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z',]
 
+let lowerCase = true
+let upperCase = confirm("Would you like to include upper case letters in your password?")
+let specialCase = confirm("Would you like to include special characters in your password?")
+let numberCase = confirm("Would you like to include numbers in your password?")
+var passwordLength = prompt("How long would you like your password to be? (Between 8 and 128)")
+
+
 
 
 // Assignment Code
