@@ -13,6 +13,9 @@ let numberCase = confirm("Would you like to include numbers in your password?")
 var passwordLength = prompt("How long would you like your password to be? (Between 8 and 128)")
 
 
+while (passwordLength < 8 || passwordLength > 128) { passwordLength = prompt("Please input a password length between 8 and 128.") }
+while (isNaN(passwordLength) == true || passwordLength === "") { passwordLength = prompt("Please input a number."); }
+
 
 
 // Assignment Code
