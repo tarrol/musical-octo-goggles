@@ -8,13 +8,14 @@ var upperCharacters = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L
 
 //User Inputs
 
+var lowerCase = ""
 var upperCase = ""
 var specialCase = ""
 var numberCase = ""
 var passwordPool = []
 
-let lowerCase = true
 function questions() {
+  lowerCase = confirm("Would you like to include lower case letters in your password?")
   upperCase = confirm("Would you like to include upper case letters in your password?")
   specialCase = confirm("Would you like to include special characters in your password?")
   numberCase = confirm("Would you like to include numbers in your password?")
@@ -57,12 +58,12 @@ var generateBtn = document.querySelector("#generate");
 // Write password to the #password input
 function writePassword() {
   questions()
-  generatePassword()
-  var passwordOutput = password.join('')
-  console.log(passwordOutput);
-  var passwordText = document.querySelector("#password");
-  passwordText.value = passwordOutput;
-
+  if (!lowerCase && !upperCase && !specialCase && !numberCase) { alert("No password parameters selected: you must select at least 1 type of character to be included.") } else {
+    generatePassword()
+    var passwordOutput = password.join('')
+    var passwordText = document.querySelector("#password");
+    passwordText.value = passwordOutput;
+  }
 }
 
 
