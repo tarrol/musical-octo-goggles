@@ -4,6 +4,8 @@
 
 Web-page with a button that creates a password based on the user input declarations.
 
+Deployed page link: https://tarrol.github.io/musical-octo-goggles/
+
 ## Screenshot
 ![Screenshot of the portfolio page](/screenshot.png?raw=true "Password Generator")
 
